@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_listar"
+    android:background="@color/negro"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Listar">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="FILTRAR:"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GENERO:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+
+        <RadioGroup
+            android:id="@+id/radiofiltrar"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/rdbOne">
+
+            <RadioButton
+                android:id="@+id/radioButtonM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:buttonTint="@color/white"
+                android:text="M"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonF"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:buttonTint="@color/white"
+                android:layout_height="wrap_content"
+                android:text="F" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDAD:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/desdeEditext"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textColor="#fff"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="#ccc"
+                android:hint="DESDE"
+                />
+
+            <EditText
+                android:id="@+id/hastaEditext"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textColor="#fff"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="#ccc"
+                android:hint="HASTA"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/filtrarBTN"
+        android:background="@color/gris"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:text="FILTRAR"/>
+    <ListView
+        android:layout_margin="10dp"
+        android:id="@+id/persona_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/buscar">
+
+    <fragment
+        android:id="@+id/insert"
+        android:name="com.example.realm_splaza.Insert"
+        android:label="Insert"
+        tools:layout="@layout/fragment_insert" />
+    <fragment
+        android:id="@+id/buscar"
+        android:name="com.example.realm_splaza.Listar"
+        android:label="Listar"
+        tools:layout="@layout/fragment_listar" />
+    <fragment
+        android:id="@+id/modificar"
+        android:name="com.example.realm_splaza.Modificar"
+        android:label="fragment_modificar2"
+        tools:layout="@layout/fragment_modificar2" />
+    <fragment
+        android:id="@+id/listaModificar"
+        android:name="com.example.realm_splaza.ListaModificar"
+        android:label="fragment_lista_modificar"
+        tools:layout="@layout/fragment_lista_modificar" />
+</navigation>
