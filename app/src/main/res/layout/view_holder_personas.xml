@@ -41,6 +41,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25sp" />
+        <TextView
+            android:id="@+id/textViewNumTel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
 
 
 

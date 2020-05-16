@@ -73,6 +73,7 @@ PersonaModAdapter personaModAdapter;
             holder.nombreTextView.setText(persona.getNombre());
             holder.edadTextView.setText(String.valueOf(persona.getEdad()));
             holder.generoTextView.setText(persona.getGenero());
+            holder.numTelTextView.setText(String.valueOf(persona.getNumTel()));
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -91,7 +92,7 @@ PersonaModAdapter personaModAdapter;
             notifyDataSetChanged();
     }
         class PersonasModViewHolder extends RecyclerView.ViewHolder {
-            TextView dniTextView, nombreTextView, generoTextView, edadTextView;
+            TextView dniTextView, nombreTextView, generoTextView, edadTextView,numTelTextView;
 
             public PersonasModViewHolder(@NonNull View itemView) {
                 super(itemView);
@@ -99,6 +100,7 @@ PersonaModAdapter personaModAdapter;
                 nombreTextView = itemView.findViewById(R.id.textViewNombremod);
                 generoTextView = itemView.findViewById(R.id.textViewGeneromod);
                 edadTextView = itemView.findViewById(R.id.textViewEdadmod);
+                numTelTextView = itemView.findViewById(R.id.textViewNumTelmod);
             }
         }
     }

@@ -52,6 +52,7 @@ RadioButton selectedRadioButton;
         final EditText nombreEdidtext = view.findViewById(R.id.editTextNombreMody);
         final EditText edadEdidText = view.findViewById(R.id.editTextEdadMody);
         final EditText dniEdidText = view.findViewById(R.id.editTextDNIMody);
+        final EditText numEditText = view.findViewById(R.id.editTextNumTelMody);
         final RadioButton m = view.findViewById(R.id.generoMMody);
         final RadioButton f = view.findViewById(R.id.generoFMody);
         Button modificar = view.findViewById(R.id.modificarBTN);
@@ -70,6 +71,7 @@ RadioButton selectedRadioButton;
                 } else {
                     f.setChecked(true);
                 }
+                numEditText.setText(String.valueOf(persona.getNumTel()));
             }
         });
 
@@ -84,7 +86,7 @@ RadioButton selectedRadioButton;
                         selectedRadioButton = view.findViewById(selectedRadioButtonId);
                         String genero = selectedRadioButton.getText().toString();
 
-                        mainViewModel.modificarPersona(nombreEdidtext.getText().toString(),Integer.parseInt(edadEdidText.getText().toString()),dniEdidText.getText().toString(),genero);
+                        mainViewModel.modificarPersona(nombreEdidtext.getText().toString(),Integer.parseInt(edadEdidText.getText().toString()),dniEdidText.getText().toString(),genero,Integer.parseInt(numEditText.getText().toString()));
                         Navigation.findNavController(view).navigate(R.id.listaModificar);
                     }
 

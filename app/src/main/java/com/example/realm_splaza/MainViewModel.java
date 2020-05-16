@@ -42,16 +42,17 @@ public class MainViewModel extends AndroidViewModel {
         cargarlista();
 
     }
-    void insertarPersona(final String nombre, final int edad,final String DNI,final String genero){
+    void insertarPersona(final String nombre, final int edad,final String DNI,final String genero,final int numtel){
         realm = Realm.getDefaultInstance();
         realm.beginTransaction();
         Persona persona = realm.createObject(Persona.class, DNI);
         persona.setNombre(nombre);
         persona.setEdad(edad);
         persona.setGenero(genero);
+        persona.setNumTel(numtel);
         realm.commitTransaction();
     }
-    void modificarPersona(final String nombre, final int edad, final String dni, final String genero){
+    void modificarPersona(final String nombre, final int edad, final String dni, final String genero,final int numTel){
         Realm realm = Realm.getDefaultInstance();
         realm.executeTransaction(new Realm.Transaction() {
             @Override
@@ -60,6 +61,7 @@ public class MainViewModel extends AndroidViewModel {
                 personas.setValue("nombre", nombre);
                 personas.setValue("edad", edad);
                 personas.setValue("genero", genero);
+                personas.setValue("numTel",numTel);
             }
         });
 
@@ -72,6 +74,7 @@ public class MainViewModel extends AndroidViewModel {
             persona.setNombre("Sergio");
             persona.setEdad(21);
             persona.setGenero("M");
+            persona.setNumTel(658556985);
             realm.commitTransaction();
         }
     public MutableLiveData<Persona> personaSeleccionado = new MutableLiveData<>();

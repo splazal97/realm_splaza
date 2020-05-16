@@ -65,6 +65,23 @@
             android:paddingBottom="10dp"
             android:textColorHint="#ccc"
             android:hint="DNI"/>
+        <EditText
+            android:id="@+id/editTextNumTelMody"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:textColor="#fff"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#ccc"
+            android:hint="NUMERO TELEFONO"/>
         <TextView
             android:textSize="25dp"
             android:text="Genero: "
