@@ -53,7 +53,7 @@ public class Insert extends Fragment {
 
         nombreEdittext =view.findViewById(R.id.editTextNombre);
         dniEditext = view.findViewById(R.id.editTextDNI);
-        edadEditText = view.findViewById(R.id.editTextEdad);
+        //edadEditText = view.findViewById(R.id.editTextEdad);
         numEdittext = view.findViewById(R.id.editTextNumTel);
         insert = view.findViewById(R.id.insertBTN);
         radioGroup = view.findViewById(R.id.radioGenero);
@@ -62,14 +62,16 @@ public class Insert extends Fragment {
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //aqui va un if
                 if (nombreEdittext.getText().toString().isEmpty()){
                     Toasty.error(getContext(),"El nombre no puede estar vacio",Toast.LENGTH_SHORT, true).show();
                 } else if (dniEditext.getText().toString().isEmpty()){
                     Toasty.error(getContext(), "El DNI no pued estar vacio", Toast.LENGTH_SHORT, true).show();
-                } else if (edadEditText.getText().toString().isEmpty()) {
+                }
+                /*else if (edadEditText.getText().toString().isEmpty()) {
                     Toasty.error(getContext(), "La edad no pued estar vacio", Toast.LENGTH_SHORT, true).show();
-                }else if (numEdittext.getText().toString().isEmpty()){
+                }
+                 */
+                else if (numEdittext.getText().toString().isEmpty()){
                     Toasty.error(getContext(), "El telefono no ùede estar vacio", Toast.LENGTH_SHORT, true).show();
                 }
                 else {
@@ -77,7 +79,7 @@ public class Insert extends Fragment {
                     if (selectedRadioButtonId !=-1) {
                         selectedRadioButton = view.findViewById(selectedRadioButtonId);
                         String genero = selectedRadioButton.getText().toString();
-                        mainViewModel.insertarPersona(nombreEdittext.getText().toString(), Integer.parseInt(edadEditText.getText().toString()), dniEditext.getText().toString(), genero,Integer.parseInt(numEdittext.getText().toString( )));
+                        mainViewModel.insertarPersona(nombreEdittext.getText().toString(), /*Integer.parseInt(edadEditText.getText().toString()),*/ dniEditext.getText().toString(), genero,Integer.parseInt(numEdittext.getText().toString( )));
                         Toasty.success(getContext(), "Insertado correctamente", Toast.LENGTH_SHORT, true).show();
                         Navigation.findNavController(view).navigate(R.id.insert);
                     }

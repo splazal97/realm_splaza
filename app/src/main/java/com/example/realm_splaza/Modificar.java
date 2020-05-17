@@ -50,7 +50,7 @@ RadioButton selectedRadioButton;
         mainViewModel = ViewModelProviders.of(requireActivity()).get(MainViewModel.class);
 
         final EditText nombreEdidtext = view.findViewById(R.id.editTextNombreMody);
-        final EditText edadEdidText = view.findViewById(R.id.editTextEdadMody);
+        //final EditText edadEdidText = view.findViewById(R.id.editTextEdadMody);
         final EditText dniEdidText = view.findViewById(R.id.editTextDNIMody);
         final EditText numEditText = view.findViewById(R.id.editTextNumTelMody);
         final RadioButton m = view.findViewById(R.id.generoMMody);
@@ -64,7 +64,7 @@ RadioButton selectedRadioButton;
             @Override
             public void onChanged(Persona persona) {
                 nombreEdidtext.setText(persona.getNombre());
-                edadEdidText.setText(String.valueOf(persona.getEdad()));
+                //edadEdidText.setText(String.valueOf(persona.getEdad()));
                 dniEdidText.setText(persona.getDni());
                 if (persona.getGenero().equals("M")){
                     m.setChecked(true);
@@ -86,7 +86,7 @@ RadioButton selectedRadioButton;
                         selectedRadioButton = view.findViewById(selectedRadioButtonId);
                         String genero = selectedRadioButton.getText().toString();
 
-                        mainViewModel.modificarPersona(nombreEdidtext.getText().toString(),Integer.parseInt(edadEdidText.getText().toString()),dniEdidText.getText().toString(),genero,Integer.parseInt(numEditText.getText().toString()));
+                        mainViewModel.modificarPersona(nombreEdidtext.getText().toString(),/*Integer.parseInt(edadEdidText.getText().toString()),*/dniEdidText.getText().toString(),genero,Integer.parseInt(numEditText.getText().toString()));
                         Navigation.findNavController(view).navigate(R.id.listaModificar);
                     }
 

@@ -43,7 +43,7 @@ public class ListarPersonas extends RealmBaseAdapter<Persona> implements ListAda
             viewHolder.dniTextView = convertView.findViewById(R.id.textViewDNI);
             viewHolder.nombreTextView = convertView.findViewById(R.id.textViewNombre);
             viewHolder.generoTextView = convertView.findViewById(R.id.textViewGenero);
-            viewHolder.edadTextView = convertView.findViewById(R.id.textViewEdad);
+            //viewHolder.edadTextView = convertView.findViewById(R.id.textViewEdad);
             viewHolder.deleteBTN = convertView.findViewById(R.id.deleteBTN);
             viewHolder.numTelTextView = convertView.findViewById(R.id.textViewNumTel);
             convertView.setTag(viewHolder);
@@ -54,7 +54,7 @@ public class ListarPersonas extends RealmBaseAdapter<Persona> implements ListAda
         viewHolder.dniTextView.setText(item.getDni());
         viewHolder.nombreTextView.setText(item.getNombre());
         viewHolder.generoTextView.setText(item.getGenero());
-        viewHolder.edadTextView.setText(String.valueOf(item.getEdad()));
+        //viewHolder.edadTextView.setText(String.valueOf(item.getEdad()));
         viewHolder.numTelTextView.setText(String.valueOf(item.getNumTel()));
 
         viewHolder.deleteBTN.setOnClickListener(new View.OnClickListener() {

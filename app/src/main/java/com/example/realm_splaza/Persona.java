@@ -14,10 +14,10 @@ public class Persona extends RealmObject {
     private String genero;
     private int numTel;
 
-    public Persona(String dni, String nombre, int edad, String genero, int numTel) {
+    public Persona(String dni, String nombre, /*int edad,*/ String genero, int numTel) {
         this.dni = dni;
         this.nombre = nombre;
-        this.edad = edad;
+        //this.edad = edad;
         this.genero = genero;
         this.numTel = numTel;
     }
@@ -29,7 +29,7 @@ public class Persona extends RealmObject {
         return "Persona{" +
                 "dni='" + dni + '\'' +
                 ", nombre='" + nombre + '\'' +
-                ", edad=" + edad +
+               // ", edad=" + edad +
                 ", genero='" + genero + '\'' +
                 ", numTel ='" + numTel + '\'' +
                 '}';
@@ -51,13 +51,16 @@ public class Persona extends RealmObject {
         this.nombre = nombre;
     }
 
-    public int getEdad() {
+   /* public int getEdad() {
         return edad;
     }
-
+*/
+   /*
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    */
 
     public String getGenero() {
         return genero;

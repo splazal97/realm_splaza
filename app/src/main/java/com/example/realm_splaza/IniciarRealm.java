@@ -12,7 +12,7 @@ public class IniciarRealm extends Application {
         Realm.init(this);
         RealmConfiguration configuration = new RealmConfiguration.Builder()
                 .name("realm.realm")
-                .schemaVersion(1)
+                .schemaVersion(2)
                 .migration(new Migration())
                 .build();
         Realm.setDefaultConfiguration(configuration);

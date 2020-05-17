@@ -32,7 +32,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textColorHint="#ccc"/>
-        <EditText
+        <!-- <EditText
             android:id="@+id/editTextEdad"
             android:textSize="20sp"
             android:inputType="number"
@@ -49,6 +49,7 @@
             android:paddingBottom="10dp"
             android:textColorHint="#ccc"
             android:hint="EDAD"/>
+            -->
         <EditText
             android:id="@+id/editTextDNI"
             android:textSize="20sp"

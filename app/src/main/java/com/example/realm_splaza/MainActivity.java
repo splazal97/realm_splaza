@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
         mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-        //mainViewModel.crearPersona();
 
     }
 

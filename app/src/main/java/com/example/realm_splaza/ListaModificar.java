@@ -71,7 +71,7 @@ PersonaModAdapter personaModAdapter;
 
             holder.dniTextView.setText(persona.getDni());
             holder.nombreTextView.setText(persona.getNombre());
-            holder.edadTextView.setText(String.valueOf(persona.getEdad()));
+            //holder.edadTextView.setText(String.valueOf(persona.getEdad()));
             holder.generoTextView.setText(persona.getGenero());
             holder.numTelTextView.setText(String.valueOf(persona.getNumTel()));
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +99,7 @@ PersonaModAdapter personaModAdapter;
                 dniTextView = itemView.findViewById(R.id.textViewDNImod);
                 nombreTextView = itemView.findViewById(R.id.textViewNombremod);
                 generoTextView = itemView.findViewById(R.id.textViewGeneromod);
-                edadTextView = itemView.findViewById(R.id.textViewEdadmod);
+                //edadTextView = itemView.findViewById(R.id.textViewEdadmod);
                 numTelTextView = itemView.findViewById(R.id.textViewNumTelmod);
             }
         }

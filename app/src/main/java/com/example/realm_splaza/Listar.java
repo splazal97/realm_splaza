@@ -42,7 +42,6 @@ ListView listView;
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -67,14 +66,17 @@ ListView listView;
                 ListView listView = view.findViewById(R.id.persona_list);
                 RadioButton f = view.findViewById(R.id.radioButtonF);
 
-                EditText desdeEditText = view.findViewById(R.id.desdeEditext);
-                EditText hastaEditText = view.findViewById(R.id.hastaEditext);
+                //EditText desdeEditText = view.findViewById(R.id.desdeEditext);
+                //EditText hastaEditText = view.findViewById(R.id.hastaEditext);
 
 
-                String desde = desdeEditText.getText().toString();
-                String hasta =  hastaEditText.getText().toString();
+                //String desde = desdeEditText.getText().toString();
+                //String hasta =  hastaEditText.getText().toString();
 
                 if (f.isChecked()) {
+                    personas = realm.where(Persona.class).equalTo("genero", "F").findAll();
+
+                    /*
                     if (!desde.isEmpty() && hasta.isEmpty()) {
                         personas = realm.where(Persona.class).equalTo("genero", "F").greaterThanOrEqualTo("edad", Integer.parseInt(desde)).lessThanOrEqualTo("edad", 99).findAll();
                     } else if (desde.isEmpty() && !hasta.isEmpty()) {
@@ -84,9 +86,13 @@ ListView listView;
                     } else {
                         personas = realm.where(Persona.class).equalTo("genero", "F").findAll();
                     }
+                    */
                 } else {
+                    personas = realm.where(Persona.class).equalTo("genero", "M").findAll();
+
+                    /*
                     if (!desde.isEmpty() && hasta.isEmpty()) {
-                        personas = realm.where(Persona.class).equalTo("genero", "M").greaterThanOrEqualTo("edad", Integer.parseInt(desde)).lessThanOrEqualTo("edad", 99).findAll();
+                        personas = realm.where(Persona.class).equalTo("genero", "M").greaterThanOrEqualTo("edad", Integer.parseInt(desde)).leThanOrEqualTo("edad", 99).findAll();
                     } else if (desde.isEmpty() && !hasta.isEmpty()) {
                         personas = realm.where(Persona.class).equalTo("genero", "M").greaterThanOrEqualTo("edad", 0).lessThanOrEqualTo("edad", Integer.parseInt(hasta)).findAll();
                     } else if (!desde.isEmpty() && !hasta.isEmpty()) {
@@ -94,8 +100,8 @@ ListView listView;
                     } else {
                         personas = realm.where(Persona.class).equalTo("genero", "M").findAll();
                     }
+                */
                 }
-
                 ListarPersonas listarPersonas = new ListarPersonas(personas);
                 listView.setAdapter(listarPersonas);
                 listarPersonas.notifyDataSetChanged();
